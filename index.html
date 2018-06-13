@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scheduler</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="module.js"></script>
+    <script src="controller.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div id="mainPart" class="container"  ng-app="myApp" ng-controller="entryCtrl">
+        <div class="row">
+            <div class="col-md">
+                <div class="title">Запланировано</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="status">{{howManyDeal()}}</div>
+            </div>
+        </div>
+        <div class="row" id="rowDay">
+            <div class="col-md">
+                <div class="today">Сегодня</div>
+            </div>
+        </div>
+        <div  id="mainArea">
+            <div class="row">
+                <div class="col-md-11" id="createForm">
+                    <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="create()">
+                             <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
+                        <input class="form-control" maxlength="120" ng-model="userText" value=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-repeat="dataForView in data.entry" id="panel">
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-tasks"></span>
+                    </button>
+                </div>
+                <div class="col-md-10" id="textArea">
+                    {{dataForView.userText}}
+                </div>
+                <div class="col-md-1">{{dataForView.dateOfCreate}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
