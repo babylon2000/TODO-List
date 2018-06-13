@@ -1,0 +1,55 @@
+
+#mainPart{
+    border: grey solid 1px;
+    border-radius: 6px;
+}
+
+.title {
+    font-family: "Times New Roman";
+    font-size: 28px;
+    color: gray;
+}
+
+.status {
+    font-family: "Times New Roman";
+    font-size: 18px;
+    color: gray;
+}
+
+.today{
+    font-family: "Times New Roman";
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#rowDay {
+    background: lightgrey;
+}
+
+.date{
+    position: absolute;
+    top: 21%;
+    font-family: "Times New Roman";
+    font-size: 14px;
+    color: gray;
+}
+#mainArea{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#mainArea .entry{
+    position: absolute;
+    top: 21%;
+    border-bottom: 1px solid grey;
+    font-family: "Times New Roman";
+    font-size: 14px;
+}
+
+#panel{
+    padding: 5px;
+}
+#textArea{
+    border-bottom: 1px solid grey;
+}
